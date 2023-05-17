@@ -8,7 +8,7 @@ function UserLogin(props) {
     <div className="sign-in-wrapper">
       <div className="form">
         <div className="input-wrapper">
-          <div>Email Address</div>
+          <div className="labels">Email Address</div>
           <input
             className="input"
             type="email"
@@ -19,7 +19,7 @@ function UserLogin(props) {
           />
         </div>
         <div className="input-wrapper">
-          <div>Password</div>
+          <div className="labels">Password</div>
           <input
             className="input"
             type="password"
