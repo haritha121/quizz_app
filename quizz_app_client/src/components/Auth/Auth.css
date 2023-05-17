@@ -76,7 +76,8 @@
   height: auto;
 }
 
-@media (max-width: 767px) {
+/* Responsive adjustments for medium devices */
+@media (max-width: 768px) {
   .auth-wrapper {
     flex-direction: column;
     align-items: center;
@@ -122,5 +123,28 @@
   .auth-wrapper .sign-in-wrapper .input-wrapper {
     margin: 5px auto;
     padding: 10px;
+  }
+}
+
+/* Responsive adjustments for small devices */
+@media (max-width: 480px) {
+  .auth-wrapper .right .header {
+    font-size: 1.8em;
+    margin-top: 15px;
+    margin-bottom: 8px;
+  }
+
+  .auth-wrapper .right .sub-header {
+    font-size: 1.2em;
+  }
+
+  .auth-wrapper .input {
+    width: 80%;
+    padding: 8px;
+    font-size: 1em;
+  }
+
+  .auth-wrapper .sign-in-wrapper .input-wrapper {
+    padding: 8px;
   }
 }

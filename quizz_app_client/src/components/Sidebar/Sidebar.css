@@ -1,0 +1,108 @@
+.sidebar-wrapper {
+  height: 100vh;
+  background: linear-gradient(to bottom right, #92d6a8, #5b9ea6);
+  color: teal;
+  width: 20vw;
+  min-width: 300px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.sidebar-wrapper .header {
+  font-size: 1.7em;
+  margin-bottom: 30px;
+}
+
+.sidebar-wrapper .user .avatar {
+  width: 9vw;
+  height: 8vw;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.sidebar-wrapper .user .name {
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+
+.sidebar-wrapper .links {
+  text-align: left;
+  padding-top: 80px;
+}
+
+.sidebar-wrapper .link {
+  color: aqua;
+  text-decoration: none;
+  border-top: 2px solid lightgrey;
+  padding: 15px 25px;
+}
+.navlinks {
+  text-decoration: none;
+}
+.navlinks:hover {
+  text-decoration-line: underline;
+  text-decoration-color: greenyellow;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sidebar-wrapper {
+    width: 30vw;
+    min-width: unset;
+    padding-top: 10px;
+  }
+
+  .sidebar-wrapper .header {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+
+  .sidebar-wrapper .user .avatar {
+    width: 15vw;
+    height: 15vw;
+  }
+
+  .sidebar-wrapper .user .name {
+    margin-top: 10px;
+    font-size: 1em;
+  }
+
+  .sidebar-wrapper .links {
+    padding-top: 50px;
+  }
+
+  .sidebar-wrapper .link {
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar-wrapper {
+    width: 90vw;
+    padding-top: 5px;
+  }
+
+  .sidebar-wrapper .header {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+
+  .sidebar-wrapper .user .avatar {
+    width: 25vw;
+    height: 25vw;
+  }
+
+  .sidebar-wrapper .user .name {
+    margin-top: 5px;
+    font-size: 0.8em;
+  }
+
+  .sidebar-wrapper .links {
+    padding-top: 20px;
+  }
+
+  .sidebar-wrapper .link {
+    padding: 5px 10px;
+  }
+}
