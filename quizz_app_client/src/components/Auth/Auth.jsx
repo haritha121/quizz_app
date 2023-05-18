@@ -4,10 +4,12 @@ import SignUp from "./SignUp";
 import UserLogin from "./UserLogin";
 import "./Auth.css";
 import store from "../../store/index";
+import Toast from "../Toast/Toast";
 import axios from "axios";
 
 function Auth() {
   const [currentTab, setCurrentTab] = useState("signin");
+  const [showToast, setShowToast] = useState(false);
   const navigate = useNavigate();
 
   const handleLogin = (email, password) => {
@@ -15,6 +17,7 @@ function Auth() {
       .post("/api/users/login", { email, password })
       .then((res) => {
         if (res.data.success) {
+          console.log("received token", res.data.token);
           store.dispatch({
             type: "login",
             _id: res.data.user._id,
@@ -22,10 +25,19 @@ function Auth() {
             token: res.data.token,
           });
           navigate("/dashboard");
+        } else {
+          setShowToast(true);
+          setTimeout(() => {
+            setShowToast(false);
+          }, 3000);
         }
       })
       .catch((err) => {
         console.log(err);
+        setShowToast(true);
+        setTimeout(() => {
+          setShowToast(false);
+        }, 3000);
       });
   };
 
@@ -49,6 +61,12 @@ function Auth() {
 
   return (
     <div className="auth-wrapper">
+      <Toast
+        model={showToast}
+        message="Incorrect login"
+        backgroundColor="#FF4539"
+      />
+
       <div className="left">
         <img src="https://freesvg.org/img/chemist.png" alt="testimage" />
       </div>

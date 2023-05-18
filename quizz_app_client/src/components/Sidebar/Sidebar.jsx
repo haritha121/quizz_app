@@ -18,7 +18,7 @@ const Sidebar = () => {
     if (user?.avatar && user?.avatar.url) {
       return `url(${user.avatar.url})`;
     } else {
-      return `url(https://icon-library.com/images/avatar-icon-images/avatar-icon-images-13.jpg)`;
+      return `url(https://icon-library.com/images/avatar-icon-images/avatar-icon-images-7.jpg)`;
     }
   };
 
@@ -40,8 +40,8 @@ const Sidebar = () => {
           <NavLink to="/my-quizzes" className="navlinks">
             <div className="link">My Quizzes</div>
           </NavLink>
-          <NavLink to="/create-quiz" className="navlinks">
-            <div className="link">Create Quiz</div>
+          <NavLink to="/quizz-question-generator" className="navlinks">
+            <div className="link">Question Generator</div>
           </NavLink>
           <NavLink to="/my-quizzes" className="navlinks">
             <div className="link">My quizzes</div>

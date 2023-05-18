@@ -4,6 +4,8 @@ import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
 import userRoutes from "./routes/users.js";
+import quizzRoutes from "./routes/quizzes.js";
+
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 9000;
@@ -13,8 +15,9 @@ let server;
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true, limit: "20mb" }));
 app.use(bodyParser.json({ limit: "20mb" }));
-
 app.use("/api/users", userRoutes);
+app.use("/api/quizzes", quizzRoutes);
+
 mongoose
   .connect(process.env.DB_URI, {
     useUnifiedTopology: true,

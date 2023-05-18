@@ -1,0 +1,14 @@
+.toast-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background-color: #30d158;
+  color: white;
+  border-radius: 5px;
+  padding: 20px 30px;
+  max-width: 90vw;
+  max-height: 90vh;
+}

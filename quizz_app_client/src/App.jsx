@@ -5,6 +5,7 @@ import Dashboard from "./components/Dashboard/Dashboard";
 import MyRedirect from "./components/Redirect/MyRedirect";
 import axios from "axios";
 import store from "./store/index";
+import QuizzQuestionGenerator from "./components/QuizzQuestionGenerator/QuizzQuestionGenerator";
 
 function App() {
   useEffect(() => {
@@ -28,6 +29,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Auth />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route
+          path="/quizz-question-generator"
+          element={<QuizzQuestionGenerator />}
+        />
+
         <Route path="*" element={<MyRedirect />} />
       </Routes>
     </BrowserRouter>

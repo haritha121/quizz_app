@@ -8,11 +8,12 @@ import axios from "axios";
 import store from "./store"; // Assuming you have your Redux store defined in a separate file
 
 const url = "http://localhost:9000";
+
 axios.defaults.baseURL = url;
 axios.defaults.headers.post["Content-Type"] = "application/json";
 axios.defaults.headers.common["Authorization"] =
   localStorage.getItem("JWT_PAYLOAD");
-
+console.log(localStorage.getItem("JWT_PAYLOAD"), "Inside index.js");
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
